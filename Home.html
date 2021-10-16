@@ -3,15 +3,18 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="Home.css">
     </head>
 
     <body>
+        <div class="line"></div>
         <div class="topnav" id="myTopnav">
-            <a href="#home" class="active">Home</a>
-            <a href="#news" >News</a>
-            <a href="#contact" >Contact</a>
-            <a href="#about" >About</a>
+            <div class="homewrapper">
+                <a href="Home.html" class="home active" id="Home"><img src="LOGO.svg" height="55px"/></a>
+            </div>
+            <a href="#contact" class="hoverable right">Contact</a>
+            <a href="#about" class="hoverable right">About</a>
+            <a href="Shop.html" class="hoverable right">Shop</a>
 
             <div class="icon" id="container" onclick="responsive_navbar()">
                 <div class="bar1"></div>
@@ -25,13 +28,18 @@
                 var x = document.getElementById("myTopnav");
                 if (x.className === "topnav") {
                     x.className += " responsive";
+                    console.log("Add responsive");
                 } else {
                     x.className = "topnav";
+                    console.log("removed responsive");
                 }
                 x = document.getElementById("container");
                 x.classList.toggle("change");
             }
         </script>
-
+        <div class="banner-container">
+            <img src="https://3.bp.blogspot.com/-YpZ3fVowzmk/XNPZARfQ19I/AAAAAAAAA48/403870Ig0_wGlmCqkgCd7Bwdjq0YRK5CwCEwYBhgL/s1600/gym-banner-1.jpg">
+        </div>
+        <p>Hello, world!</p>
     </body>
 </html>
